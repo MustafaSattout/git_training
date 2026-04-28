@@ -23,6 +23,7 @@ A personal reference covering everything from version control basics to Git inte
 
 ---
 
+<a id="concepts-theory"></a>
 ## 📚 Concepts & Theory
 
 ### Version Control System (VCS)
@@ -63,6 +64,7 @@ A system that tracks changes to files over time, enabling collaboration, history
 
 ---
 
+<a id="setup-configuration"></a>
 ## 🔧 Setup & Configuration
 
 ### Installation
@@ -129,6 +131,7 @@ source /usr/share/bash-completion/completions/git
 
 ---
 
+<a id="starting-a-project"></a>
 ## 🚀 Starting a Project
 
 ### Create a New Repo
@@ -156,6 +159,7 @@ git clone https://github.com/user/repo.git my-folder    # Clone into custom fold
 
 ---
 
+<a id="the-commit-workflow"></a>
 ## 📝 The Commit Workflow
 
 ### The Three Areas
@@ -226,6 +230,7 @@ git add -n "*.md"                # Preview which files match a pattern
 
 ---
 
+<a id="file-operations"></a>
 ## 📂 File Operations
 
 ### Move or Rename
@@ -257,6 +262,7 @@ git rm --cached filename.md       # Stop tracking but KEEP the file on disk
 
 ---
 
+<a id="inspecting-status"></a>
 ## 🔍 Inspecting & Status
 
 ### Check Status
@@ -307,6 +313,7 @@ git log -1 --format="%h"         # Short hash of latest commit
 
 ---
 
+<a id="comparing-changes-diff"></a>
 ## 🔄 Comparing Changes (Diff)
 
 ### The Four Diff Modes
@@ -387,6 +394,7 @@ git diff master feature-branch   # Compare two branches
 
 ---
 
+<a id="working-with-remotes"></a>
 ## 🌐 Working with Remotes
 
 ### Push & Pull
@@ -410,6 +418,7 @@ git fetch origin                 # Download remote info WITHOUT merging
 
 ---
 
+<a id="help-documentation"></a>
 ## 🆘 Help & Documentation
 
 ```bash
@@ -422,6 +431,7 @@ git <command> -h                 # Quick flag summary (stays in terminal)
 
 ---
 
+<a id="git-internals"></a>
 ## 🔬 Git Internals
 
 ### The Object Model
@@ -491,6 +501,7 @@ git cat-file -p <hash>           # Show object content
 
 ---
 
+<a id="commit-messages"></a>
 ## 💬 Commit Messages
 
 ### Anatomy of a Good Message
@@ -538,6 +549,7 @@ wrapped at around 72 characters>
 
 ---
 
+<a id="troubleshooting"></a>
 ## 🚨 Troubleshooting
 
 ### Push Rejected — Non-Fast-Forward
@@ -565,6 +577,7 @@ git push origin master           # Now push
 
 ---
 
+<a id="quick-reference"></a>
 ## ⚡ Quick Reference
 
 The 10 most important commands, in real-workflow order:
@@ -605,6 +618,7 @@ git <command> -h
 
 ---
 
+<a id="common-mistakes"></a>
 ## ⚠️ Common Mistakes
 
 ### 1. Editing a file after `git add`, then committing
