@@ -1,1 +1,6 @@
-app.log
+# Directories
+
+# Specific files
+
+# Regular Expression
+*.log
