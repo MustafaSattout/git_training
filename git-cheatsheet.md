@@ -624,6 +624,36 @@ logs/*
 
 The trailing `/` vs `/*` matters: `/` ignores the folder itself, `/*` only ignores what's inside.
 
+### Ignore Already-Tracked Files
+
+`.gitignore` is powerless against files Git is already tracking. You must explicitly stop tracking them first.
+
+```bash
+# Step 1 — Add to .gitignore
+echo "config.json" >> .gitignore
+
+# Step 2 — Stop tracking (file stays on disk)
+git rm --cached config.json
+
+# Step 3 — Commit both changes together
+git add .gitignore
+git commit -m "chore: stop tracking config.json"
+```
+
+**For an entire folder:**
+
+```bash
+git rm --cached -r node_modules/
+```
+
+> ⚠️ `git rm --cached` removes from **future** commits only. The file still exists in commit history. If it had secrets, **rotate them immediately** — don't rely on history removal alone.
+
+| Situation | Action |
+|-----------|--------|
+| Secret committed locally | `git reset` to undo, add to `.gitignore` |
+| Secret committed and pushed | Rotate/revoke the secret immediately |
+| Must scrub history | Use `git filter-repo` or BFG Repo-Cleaner |
+
 ---
 
 <a id="working-with-remotes"></a>
